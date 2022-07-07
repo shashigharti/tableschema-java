@@ -22,5 +22,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run test
-      run: mvn clean test jacoco:report coveralls:report
+      run: mvn test -B
 
