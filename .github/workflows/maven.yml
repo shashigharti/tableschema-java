@@ -24,5 +24,5 @@ jobs:
     - name: Run test
       run: mvn clean test jacoco:report
     - name: 🚀 Coveralls Coverage Report Submission
-      run: mvn coveralls:report -Dservice=github -DrepoToken=${{ secrets.COVERALL_REPO_SECRET }}
+      run: mvn coveralls:report -Dservice=travis-pro -DrepoToken=${{ secrets.COVERALL_REPO_SECRET }}
 
