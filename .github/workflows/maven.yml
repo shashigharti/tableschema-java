@@ -21,10 +21,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: 🛠 Coveralls Coverage Report Setup
-      run: sed -i.bak 's/yourcoverallsprojectrepositorytoken/${{ secrets.COVERALL_REPO_TOKEN }}/g' pom.xml
-    - name: 🚀 Coveralls Coverage Report Submission
-      run: mvn coveralls:report
     - name: Run test
       run: mvn clean test jacoco:report
 
