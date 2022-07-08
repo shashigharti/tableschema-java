@@ -26,5 +26,5 @@ jobs:
     - name: 🚀 Coveralls Coverage Report Submission
       run: mvn coveralls:report
     - name: Run test
-      run: mvn clean test jacoco:report coveralls:report
+      run: mvn clean test jacoco:report
 
