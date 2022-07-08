@@ -23,4 +23,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run test
       run: mvn clean test jacoco:report
+    - name: 🚀 Coveralls Coverage Report Submission
+      run: mvn coveralls:report --define repoToken=${{ secrets.COVERALL_REPO_TOKEN }}
 
